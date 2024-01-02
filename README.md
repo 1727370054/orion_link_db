@@ -69,10 +69,10 @@ OrionLinkDB 是一个 C++ 库，提供了方便的接口来与 MySQL 数据库�
    `````c++
    string sql = "";
    sql = "create table if not exists video( \
-   	   id int auto_increment,		    \
-   	   name varchar(1024),			    \
-   	   data mediumblob,		            \
-   	   size int,					   \
+   	   id int auto_increment,		        \
+   	   name varchar(1024),			        \
+   	   data mediumblob,		              \
+   	   size int,					           \
    	   primary key(id))";
    if (ol.Query(sql.c_str(), sql.size()))
    {
@@ -101,7 +101,7 @@ OrionLinkDB 是一个 C++ 库，提供了方便的接口来与 MySQL 数据库�
    file2.Drop();
    ````
 
-8. ##### 下载数据中的二进制文件
+8. ##### 下载数据库中的二进制文件
 
    ``````c++
    for (;;)
