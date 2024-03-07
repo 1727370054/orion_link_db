@@ -117,7 +117,10 @@ OrionLinkDB 是一个 C++ 库，提供了方便的接口来与 MySQL 数据库�
    ```cpp
    auto rows = db.GetResult("SELECT * FROM your_table");
    db.FreeResult();
-   /// or
+   /// 格式化输出结果
+   std::string sql = "select * from your_table";
+	db.Query(sql.c_str());
+	db.StoreResult();
    db.ShowFormatResult(); /// 格式化显示结果，第一个参数可指定表格列宽度
    ```
 
